@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+:root{
+    --ff-primary: 'Nunito Sans', sans-serif;
+    --clr-neutral-darkBlue-darkModeElements: hsl(209, 23%, 22%);
+    --clr-neutral-veryDarkBlue-darkModeBg: hsl(207, 26%, 17%);
+    --clr-neutral-veryDarkBlue-LightModeText: hsl(200, 15%, 8%);
+    --clr-neutral-darkGray-lightModeInput: hsl(0, 0%, 52%);
+    --clr-neutral-veryLightGray-lightModeBg: hsl(0, 0%, 98%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: var(--clr-neutral-veryLightGray-lightModeBg);
+    color: #000;
+    transition: 0.5s ease-out;
+}
+body.dark-mode{
+    background-color: var(--clr-neutral-veryDarkBlue-darkModeBg);
+    color: var(--clr-neutral-white);
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3%;
+    padding-block: 1.5rem;
+    box-shadow: var(--clr-neutral-darkGray-lightModeInput) 3px 4px 10px -5px;
+    background-color: var(--clr-neutral-white);
+    transition: 0.5s ease-out;
+}
+nav button{
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+nav button.dark-theme{
+    color: white;
+}
+body.dark-mode nav{
+    background-color: var(--clr-neutral-darkBlue-darkModeElements);
+    box-shadow: none;
+}
+#countries{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+    flex-wrap: wrap;
+}
+.bold{
+    font-weight: 800;
+}
+
+.card{
+    width: 20%;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s linear;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.1s linear;
+}
+.card img{
+    border-radius: 5px 5px 0 0;
+}
+.card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+.text{
+    margin: 1rem;
+    margin-block-end: 2rem;
+}
+.card h3{
+    line-height: 2;
+}
+.card img{
+    width: 100%;
+    height: clamp(30%, 50%, 50%);
+    object-fit: cover;
+    
+}
+body.dark-mode .card{
+    background-color: var(--clr-neutral-darkBlue-darkModeElements);
+    box-shadow: none;
+}
+fieldset{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding-inline: 5rem;
+    padding-block-start: 2rem;
+}
+.input-with-icon input{
+    height: 100%;
+    width: 90%;
+    background-color: transparent;
+    padding: 0.5em;
+    border: none;
+}
+.input-with-icon input:focus{
+    border: none;
+    outline: none;
+}
+.input-with-icon{
+    width: 30%;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--clr-neutral-darkGray-lightModeInput) 3px 4px 10px -5px;
+    transition: 0.5s;
+}
+
+fieldset select{
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    padding-inline: 1rem;
+    box-shadow: var(--clr-neutral-darkGray-lightModeInput) 3px 4px 10px -5px;
+    transition: 0.5s;
+}
+fieldset select:focus{
+    outline: none;
+}
+    
+
+.input-with-icon.dark-theme{
+    background-color: var(--clr-neutral-darkBlue-darkModeElements);
+    color: white;
+    box-shadow: none;
+}
+.input-with-icon.dark-theme input{
+    color: white;
+}
+
+body.dark-mode select{
+    background-color: var(--clr-neutral-darkBlue-darkModeElements);
+    color: white;
+    box-shadow: none;
+}
+.optionsButton{
+    transition: 0.5s linear;
+    border: none;
+    box-shadow: var(--clr-neutral-darkGray-lightModeInput) 3px 4px 10px -5px;
+    font-size: 1rem;
+    vertical-align: middle;
+    transition: 0.2s linear;
+}
+body.dark-mode .optionsButton{
+    background-color: var(--clr-neutral-darkBlue-darkModeElements);
+    color: var(--clr-neutral-white);
+    box-shadow: none;
+    transition: 0.2s linear;
+}
+
+.button{
+    margin: 3em;
+    padding: 0.5rem;
+    padding-inline: 2rem;
+    background-color: var(--clr-neutral-white);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--clr-neutral-darkGray-lightModeInput) 0px 0px 4px 0px;
+    transition: 0.2s;
+}
+.button:focus{
+    outline: none;
+}
+.button:hover{
+    transform: scale(1.1)
+}
+.details{
+    display: flex;
+    width: 100%;
+    flex-basis: 100%;
+    padding-inline: 2em;
+}
+.details img{
+    width: 45%;
+}
+.details-text{
+    padding: 2rem;
+    padding-inline: 6rem;
+    justify-content: space-between;
+}
+.details-text h1{
+    width: 100%;
+    margin-block: 3%;
+    font-size: 5vh;
+}
+.details-text p{
+    font-size: 2.3vh;
+    line-height: 2;
+}
+.text-detail{
+    width: 100%;
+    columns: 2;
+    padding: 0;
+    margin-block: 10%;
+    column-span: all;
+}
+ion-icon{
+    vertical-align: middle;
+}
+.button-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.button-group button{
+    margin-inline: 0.3rem;
+    border: none;
+    background-color: var(--clr-neutral-white);
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: var(--clr-neutral-darkGray-lightModeInput) 0px 0px 4px 0px;
+    transition: 0.2s;
+}
+.button-group button:hover{
+    transform: scale(1.1);
+}
+body.dark-mode .button-group button{
+    background-color: var(--clr-neutral-darkBlue-darkModeElements);
+    color: var(--clr-neutral-white);
+    box-shadow: none;
+}
+#back{
+    display: none;
+}
+@media (max-width: 800px) {
+    .card{
+        width: 100%;
+    }
+    fieldset{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    select{
+        width: 60%;
+        padding: 1em;
+        margin-block: 1em;
+    }
+    .input-with-icon{
+        width: 100%;
+    }
+    #countries{
+        padding-block-start: 0;
+    }
+    .text-detail{
+        columns: 1;
+        gap: 0;
+        margin: 0;
+    }
+    .details{
+        flex-direction: column;
+        padding: 0;
+    }
+    .details-text{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .details-text h1{
+        margin: 0;
+    }
+    .text p{
+        line-height: 2.2;
+    }
+    .details img{
+        width: 100%;
+    }
+    .button-group{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+    }
+    .button-group p{
+        width: 100%;
+    }
+    .button-group button{
+        margin-inline: .2rem;
+    }
+    .button{
+        margin: 2em;
+    }
+    .details > *{
+        margin-block: 1rem;
+    }
+}
